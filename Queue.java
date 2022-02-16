@@ -48,7 +48,7 @@ class Queue {
     
     // Return whether the queue is empty.
     public boolean empty() {
-
+        return first == null;
     }
 
     // Return the number of elements in queue.
