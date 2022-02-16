@@ -32,7 +32,12 @@ class Queue {
 
     // Removes the element from in front of queue.
     public int dequeue() {
-
+        if (empty()) throw new NoSuchElementException("empty queue");
+        Integer returnElement = first.node;
+        first = first.next;
+        num--;
+        if (empty()) last = null;
+        return returnElement;
     }
     
     // Get the front element.
