@@ -5,10 +5,18 @@ import java.io.*;
 import java.util.*;
 
 class Queue {
+    private Node  first, last;
+    private int n;
+
+    private static class Node {
+        private int i;
+        private Node next;
+    }
 
 
     public Queue() {
-
+        first=last =null;
+        n=0;
     }
 
     // Push element x to the back of queue.
