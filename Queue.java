@@ -52,8 +52,8 @@ class Queue {
     }
 
     // Return the number of elements in queue.
-    public boolean size() {
-
+    public int size() {
+        return num;
     }
     
     public static void main(String[] args) {
