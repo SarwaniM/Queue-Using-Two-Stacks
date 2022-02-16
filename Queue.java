@@ -6,22 +6,28 @@ import java.util.*;
 
 class Queue {
     private Node  first, last;
-    private int n;
+    private int num;
 
     private static class Node {
-        private int i;
+        private int node;
         private Node next;
     }
 
 
     public Queue() {
         first=last =null;
-        n=0;
+        num=0;
     }
 
     // Push element x to the back of queue.
     public void enqueue(int x) {
-
+        Node oldlast = last;
+        last = new Node();
+        last.node = x;
+        last.next = null;
+        if (empty()) first = last;
+        else oldlast.next = last;
+        num++;
     }
 
     // Removes the element from in front of queue.
