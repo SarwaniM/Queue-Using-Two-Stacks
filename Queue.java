@@ -42,7 +42,8 @@ class Queue {
     
     // Get the front element.
     public int peek() {
-
+        if (empty()) throw new NoSuchElementException("Queue underflow");
+        return first.node;
     }
     
     // Return whether the queue is empty.
